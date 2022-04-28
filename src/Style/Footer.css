@@ -1,0 +1,29 @@
+﻿footer {
+    left: 0;
+    bottom: 0;
+    color: var(--neutral-white);
+    padding: 9rem 10%;
+    background: var(--neutral-very-dark-black-blue);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.938rem;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-first > div,
+.footer-nav-second > div,
+.footer-nav-third > div {
+    opacity: 0.75;
+    line-height: 33px;
+}
+
+.footer-nav-header {
+    opacity: 1 !important;
+    padding-bottom: 1.5rem;
+}

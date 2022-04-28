@@ -1,0 +1,72 @@
+﻿header {
+    padding: 2em 10%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: transparent;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.scroll-nav {
+    background: var(--neutral-very-dark-black-blue);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.75;
+    transition: 120ms ease-in-out;
+    
+}
+
+.nav-links > div:hover {
+    cursor: pointer;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.register-container {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+    align-items: center;
+}
+
+.register-container > div:nth-of-type(1) {
+    opacity: 0.75;
+    transition: 120ms ease-in-out;
+}
+
+.register-container > div:nth-of-type(1):hover {
+    opacity: 1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register-container > div:nth-of-type(2) {
+    color: var(--primary-light-red);
+    padding: 0.8rem 2.5rem;
+    border-radius: 1.5rem;
+    background: var(--neutral-white);
+    transition: 120ms ease-in-out;
+}
+
+.register-container > div:nth-of-type(2):hover {
+    cursor: pointer;
+    background: #FF7B86;
+    color: var(--neutral-white)
+}

@@ -1,0 +1,60 @@
+﻿.features {
+    text-align: left;
+    font-family: "Overpass", sans-serif;
+    color: var(--primary-very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 0;
+    
+}
+h2, h3{
+    font-weight: 600;
+}
+
+.features > h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1.2px;
+    align-self: center;
+}
+
+h3 {
+    font-size: 1.75rem;
+    line-height: 28px;
+}
+
+.features-description {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.picture {
+    position: relative;
+    left: clamp(10%, 30%, 70%);
+    width: clamp(100%, 150%, 200%);
+    margin-left: -30%;
+}
+
+.features-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 5rem;
+}
+
+.editor, .management {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.editor > p, .management > p {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #4C5862;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    max-width: 90ch;
+}
