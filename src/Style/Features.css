@@ -50,6 +50,10 @@ h3 {
     gap: 2rem;
 }
 
+.picture > img:nth-of-type(2) {
+    display: none;
+}
+
 .editor > p, .management > p {
     font-weight: 300;
     font-size: 1rem;
@@ -57,4 +61,38 @@ h3 {
     letter-spacing: 0.5px;
     line-height: 28px;
     max-width: 90ch;
+}
+
+@media (max-width: 768px) {
+    .features-description {
+        flex-direction: column;
+    }
+
+    .features-text {
+        order: 2;
+    }
+    
+    .picture > img:nth-of-type(1) {
+        display: none;
+    }
+    
+    .picture > img:nth-of-type(2) {
+        display: initial;
+        margin: 0 auto;
+    }
+
+    .picture {
+        position: initial;
+        left: initial;
+        width: initial;
+        margin-left: 0;
+    }
+    
+    .features > h2 {
+        padding-bottom: 2rem;
+    }
+    
+    .editor, .management {
+        text-align: center;
+    }
 }

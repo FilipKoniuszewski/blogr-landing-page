@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import editor from "../Assets/images/illustration-editor-desktop.svg"
+import editorMobile from "../Assets/images/illustration-editor-mobile.svg"
 import "../Style/Features.css"
 
 function Features(props) {
@@ -38,6 +39,7 @@ function Features(props) {
                 </div>
                 <div className="picture">
                     <img src={editor} alt={editor} />
+                    <img src={editorMobile} alt={editor} />
                 </div>
             </div>
         </section>

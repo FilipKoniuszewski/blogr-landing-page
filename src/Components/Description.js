@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import laptop from "../Assets/images/illustration-laptop-desktop.svg"
+import laptopMobile from "../Assets/images/illustration-laptop-mobile.svg"
 import "../Style/Description.css"
 
 function Description(props) {
@@ -7,6 +8,7 @@ function Description(props) {
         <section className="description">
             <div className="description-picture">
                 <img src={laptop} alt="laptop" />
+                <img src={laptopMobile} alt="laptopMobile" />
             </div>
             <div className="description-text">
                 <div className="simple">

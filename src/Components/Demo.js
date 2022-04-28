@@ -6,7 +6,7 @@ function Demo(props) {
     return (
         <section className="demo">
             <div className="demo-picture">
-                <img src={art} alt={art} />
+                <img src={art} alt="art" />
             </div>
             <div className="demo-text">
                 <h2>State of the Art Infrastructure</h2>

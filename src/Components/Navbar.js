@@ -2,10 +2,14 @@
 import logo from "../Assets/images/logo.svg"
 import arrow from "../Assets/images/icon-arrow-light.svg"
 import "../Style/Navbar.css"
+import burgerIcon from "../Assets/images/icon-hamburger.svg";
+import closeIcon from "../Assets/images/icon-close.svg";
 
 export default function Navbar(props) {
 
     const [isScrolling, setIsScrolling] = useState(false);
+    
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const listenScrollEvent = () => {
         if (window.scrollY >= 100) {
@@ -21,6 +25,12 @@ export default function Navbar(props) {
             window.removeEventListener("scroll", listenScrollEvent);
         }
     }, []);
+    
+    function ToggleMenu() {
+        setMenuOpen(!menuOpen)
+    }
+    
+    
     
     return (
         <header className={`navbar ${isScrolling && 'scroll-nav'}`}>
@@ -54,6 +64,9 @@ export default function Navbar(props) {
                 <div className="sign-up">
                     Sign Up
                 </div>
+            </div>
+            <div className="toggle-menu" onClick={ToggleMenu}>
+                <img src={menuOpen ? closeIcon : burgerIcon} alt="burger-icon" />
             </div>
         </header>
     );

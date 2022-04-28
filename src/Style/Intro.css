@@ -65,3 +65,12 @@ h1 {
     color: var(--primary-light-red);
     background: var(--neutral-white);
 }
+
+@media (max-width: 768px) {
+    .intro {
+        background-image: url(../Assets/images/bg-pattern-intro-mobile.svg),
+        linear-gradient(150deg, var(--gradient-very-light-red), var(--gradient-light-red) 80%);
+        
+
+    }
+}

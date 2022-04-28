@@ -12,7 +12,10 @@
     position: relative;
     left: -22%;
     margin-right: -20rem;
-    /*width: clamp(30%, 100%, 300%);*/
+}
+
+.description-picture > img:nth-of-type(2) {
+    display: none;
 }
 
 .description-text {
@@ -34,4 +37,36 @@
     line-height: 28px;
     font-weight: 300;
     width: clamp(45ch, 50%, 75ch);
+}
+
+@media (max-width: 768px) {
+    .description-picture > img:nth-of-type(2) {
+        display: initial;
+    }
+    
+    .description-picture > img:nth-of-type(1) {
+        display: none;
+    }
+
+    .description-picture {
+        position: initial;
+        left: 0;
+        margin-right: 0;
+    }
+    
+    
+    .simple, .tooling {
+        align-items: center;
+    }
+
+    .description {
+        flex-direction: column;
+        text-align: center;
+        margin-top: -12rem;
+        margin-bottom: 7rem;
+    }
+
+    .simple > p, .tooling > p {
+    }
+
 }

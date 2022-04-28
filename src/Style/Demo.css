@@ -39,3 +39,34 @@
     letter-spacing: -1.2px;
     font-weight: 600;
 }
+
+@media (max-width: 768px) {
+    .demo {
+        gap: 1rem;
+        margin: 20rem 0;
+        padding: 3rem 0 6rem 0;
+        flex-direction: column;
+        text-align: center;
+        background-position: 50% 130%, center;
+        background-repeat: no-repeat;
+    }
+
+    .demo-text {
+        margin: -20rem auto 0 auto;
+    }
+    
+    .demo-text > p {
+        width: clamp(45ch, 50%, 75ch);
+        margin: 0 auto;
+    }
+
+    .demo-picture {
+        position: relative;
+        top: -20rem;
+        margin-bottom: 0;
+    }
+    
+    .demo-picture > img {
+        width: 90%;
+    }
+}

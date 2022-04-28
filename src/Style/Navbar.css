@@ -70,3 +70,25 @@
     background: #FF7B86;
     color: var(--neutral-white)
 }
+
+.toggle-menu {
+    display: none;
+    margin-left: auto;
+}
+.toggle-menu:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .register-container {
+        display: none;
+    }
+    
+    .toggle-menu {
+        display: initial;
+    }
+}
