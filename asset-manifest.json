@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/blogr-landing-page/static/css/main.31d6cfe0.css",
+    "main.js": "/blogr-landing-page/static/js/main.4c3489cf.js",
+    "index.html": "/blogr-landing-page/index.html",
+    "main.4c3489cf.js.map": "/blogr-landing-page/static/js/main.4c3489cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.4c3489cf.js"
+  ]
+}
