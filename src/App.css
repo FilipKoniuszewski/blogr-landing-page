@@ -21,7 +21,8 @@
 
 body {
     font-size: 1rem;
-    color: var(--neutral-white)
+    color: var(--neutral-white);
+    overflow-x: hidden;
 }
 
 * {

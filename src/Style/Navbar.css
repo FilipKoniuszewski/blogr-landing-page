@@ -24,16 +24,75 @@
     gap: 2rem;
 }
 
-.nav-links > div {
+.nav-links > div > div:nth-of-type(1) {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     opacity: 0.75;
     transition: 120ms ease-in-out;
+}
+
+.nav-links > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.link-menu {
+    background: var(--neutral-white);
+    color: #2D2E40;
+    font-weight: 400;
+    border-radius: 0.3rem;
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: absolute;
+    top: 3.3rem;
+    width: 5rem;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center
     
 }
 
-.nav-links > div:hover {
+.link-menu > div {
+    padding: 0.5rem 0;
+}
+
+
+
+.link-menu-inactive {
+    display: none;
+}
+
+.link-menu-active {
+    display: initial;
+}
+
+.product-container > img, 
+.company-container > img,
+.connect-container > img {
+    transition: 0.3s;
+}
+
+.rotate-arrow {
+    transform: rotate(180deg);
+}
+
+
+
+
+.link-menu > div {
+    transition: 120ms ease-in-out;
+}
+
+.link-menu > div:hover {
+    cursor: pointer;
+    font-weight: 700;
+    
+}
+
+
+.nav-links > div > div:nth-of-type(1):hover {
     cursor: pointer;
     opacity: 1;
     text-decoration: underline;
@@ -90,5 +149,17 @@
     
     .toggle-menu {
         display: initial;
+    }
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
     }
 }
