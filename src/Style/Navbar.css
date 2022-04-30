@@ -58,8 +58,6 @@
     padding: 0.5rem 0;
 }
 
-
-
 .link-menu-inactive {
     display: none;
 }
@@ -137,6 +135,78 @@
 .toggle-menu:hover {
     cursor: pointer;
 }
+
+.mobile-menu-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 3.5rem 1.5rem;
+    padding: 1.5rem;
+    position: fixed;
+    background: var(--neutral-white);
+    color: #1F3E5A;
+    border-radius: 0.35rem;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    user-select: none;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.mobile-menu-container-active {
+    display: flex;
+}
+
+.mobile-menu-container-inactive {
+    display: none;
+}
+
+
+
+.mobile-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-toggle-login {
+    transition: 120ms ease-in-out;
+}
+
+.mobile-toggle-login:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.separator {
+    border-top: 1px solid #8c8b8b;
+    opacity: 0.3;
+    width: 100%;
+}
+
+
+
+.mobile-toggle-sign-up {
+    color: var(--neutral-white);
+    padding: 0.8rem 2.5rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(150deg, var(--gradient-very-light-red), var(--gradient-light-red) 80%);
+    transition: 120ms ease-in-out;
+}
+
+.mobile-toggle-sign-up:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+
+    
+
 
 @media (max-width: 768px) {
     .nav-links {

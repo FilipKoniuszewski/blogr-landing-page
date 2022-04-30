@@ -4,12 +4,15 @@ import arrow from "../Assets/images/icon-arrow-light.svg"
 import "../Style/Navbar.css"
 import burgerIcon from "../Assets/images/icon-hamburger.svg";
 import closeIcon from "../Assets/images/icon-close.svg";
+import arrowMobile from "../Assets/images/icon-arrow-dark.svg";
 
 export default function Navbar(props) {
 
     const [isScrolling, setIsScrolling] = useState(false);
     
     const [desktopMenu, setDesktopMenu] = useState("");
+
+    const [mobileMenu, setMobileMenu] = useState(false);
     
     const productRef = useRef(null);
     
@@ -17,7 +20,7 @@ export default function Navbar(props) {
     
     const connectRef = useRef(null);
     
-    const [menuOpen, setMenuOpen] = useState(false);
+    const mobileMenuRef = useRef(null);
 
     const listenScrollEvent = () => {
         if (window.scrollY >= 100) {
@@ -45,6 +48,7 @@ export default function Navbar(props) {
                 && !companyRef.current.contains(e.target)
                 && !connectRef.current.contains(e.target)) {
                 setDesktopMenu("");
+                setMobileMenu(false);
             }
         };
         document.addEventListener("mousedown", checkIfClickedOutside);
@@ -52,10 +56,21 @@ export default function Navbar(props) {
             document.removeEventListener("mousedown", checkIfClickedOutside);
         };
     }, [desktopMenu]);
-    
-    function ToggleMenu() {
-        setMenuOpen(!menuOpen)
-    }
+
+    useEffect(() => {
+        const checkIfClickedOutside = (e) => {
+            if (
+                mobileMenu
+                && mobileMenuRef.current
+                && !mobileMenuRef.current.contains(e.target)) {
+                setMobileMenu(false);
+            }
+        };
+        document.addEventListener("mousedown", checkIfClickedOutside);
+        return () => {
+            document.removeEventListener("mousedown", checkIfClickedOutside);
+        };
+    }, [mobileMenu]);
     
     return (
         <header className={`navbar ${isScrolling && 'scroll-nav'}`}>
@@ -141,9 +156,38 @@ export default function Navbar(props) {
                     Sign Up
                 </div>
             </div>
-            <div className="toggle-menu" onClick={ToggleMenu}>
-                <img src={menuOpen ? closeIcon : burgerIcon} alt="burger-icon" />
+            <div className="toggle-menu">
+                <img src={mobileMenu ? closeIcon : burgerIcon} alt="burger-icon" onClick={() => setMobileMenu(!mobileMenu)}/>
+                <div ref={mobileMenuRef} className={`mobile-menu-container ${mobileMenu ? 'mobile-menu-container-active' : 'mobile-menu-container-inactive'}`}>
+                    <div className="mobile-menu-section">
+                        <div className="mobile-section-header">
+                            <span> Product </span>
+                            <img src={arrowMobile} className={desktopMenu === 'product' && 'rotate-arrow'} alt="arrow"/>
+                        </div>
+                    </div>
+                    <div className="mobile-menu-section"> 
+                        <div className="mobile-section-header">
+                            <span> Company </span>
+                            <img src={arrowMobile} className={desktopMenu === 'company' && 'rotate-arrow'} alt="arrow"/>
+                        </div>
+                    </div>
+                    <div className="mobile-menu-section">
+                        <div className="mobile-section-header">
+                            <span>Connect</span>
+                            <img src={arrowMobile} className={desktopMenu === 'connect' && 'rotate-arrow'} alt="arrow"/>
+                        </div>
+                    </div>
+                    <hr className="separator" />
+                    <div className="mobile-toggle-login">
+                        Login
+                    </div>
+                    <div className="mobile-toggle-sign-up">
+                        Sign up
+                    </div>
+                
+                </div>
             </div>
+            
         </header>
     );
 }
