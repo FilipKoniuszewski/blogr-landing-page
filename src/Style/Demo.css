@@ -25,7 +25,7 @@
     font-size: 1rem;
     letter-spacing: 0.5px;
     line-height: 28px;
-    max-width: 69ch;
+    max-width: 90ch;
 }
 
 .demo-picture {
@@ -52,12 +52,7 @@
     }
 
     .demo-text {
-        margin: -20rem auto 0 auto;
-    }
-    
-    .demo-text > p {
-        width: clamp(45ch, 50%, 75ch);
-        margin: 0 auto;
+        margin: -20rem 0 0 0;
     }
 
     .demo-picture {

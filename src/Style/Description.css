@@ -36,7 +36,7 @@
     letter-spacing: 0.5px;
     line-height: 28px;
     font-weight: 300;
-    width: clamp(45ch, 50%, 75ch);
+    max-width: 90ch;
 }
 
 @media (max-width: 768px) {

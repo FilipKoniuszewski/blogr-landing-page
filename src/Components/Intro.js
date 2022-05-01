@@ -7,12 +7,12 @@ export default function Intro() {
             <h1>A modern publishing platform</h1>
             <p>Grow your audience and build your online brand</p>
             <div className="intro-go-to">
-                <div className="start">
+                <button className="start">
                     Start for Free
-                </div>
-                <div className="learn">
+                </button>
+                <button className="learn">
                     Learn More
-                </div>
+                </button>
             </div>
         </section>
     );

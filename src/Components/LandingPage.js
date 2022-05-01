@@ -6,12 +6,12 @@ import Description from "./Description";
 
 function LandingPage(props) {
     return (
-        <>
+        <main>
             <Intro />
             <Features />
             <Demo />
             <Description />
-        </>
+        </main>
     );
 }
 

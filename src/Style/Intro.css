@@ -20,6 +20,7 @@ h1 {
     font-size: 4rem;
 }
 
+
 .intro > p {
     font-weight: 300;
     font-size: 1.125rem;
@@ -44,6 +45,9 @@ h1 {
     border-radius: 1.5rem;
     background: var(--neutral-white);
     transition: 120ms ease-in-out;
+    outline: none !important;
+    border: 0;
+    font-weight: 700;
 }
 
 .start:hover {
@@ -58,6 +62,7 @@ h1 {
     border-radius: 1.5rem;
     transition: 120ms ease-in-out;
     font-weight: 700;
+    background: 0;
 }
 
 .learn:hover {

@@ -22,6 +22,11 @@
 body {
     font-size: 1rem;
     color: var(--neutral-white);
+    position: relative;
+    overflow-x: hidden;
+}
+
+html {
     overflow-x: hidden;
 }
 
