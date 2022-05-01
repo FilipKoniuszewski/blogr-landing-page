@@ -10,7 +10,7 @@ challenge to help me improve coding skills by building realistic projects.
 
 ## Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-blogr-landing-page-using-reactjs-BknSgF2B5)
 - [Live Site URL](https://filipkoniuszewski.github.io/blogr-landing-page/) 
 
 ### Built with
