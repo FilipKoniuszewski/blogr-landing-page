@@ -54,6 +54,11 @@
     .demo-text {
         margin: -20rem 0 0 0;
     }
+    
+    .demo-text > p {
+        max-width: 35ch;
+        margin: 0 auto;
+    }
 
     .demo-picture {
         position: relative;
