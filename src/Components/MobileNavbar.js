@@ -31,14 +31,22 @@ function MobileNavbar(props) {
     function expandMobileMenu() {
         setMobileMenu(!mobileMenu)
         setMobileExpandedSection("")
-        
+    }
+    
+    function ExpandMenuSection(section) {
+        if (mobileExpandedSection === section) {
+            setMobileExpandedSection("")
+        }
+        else {
+            setMobileExpandedSection(section)
+        }
     }
     
     return (
         <div className="toggle-menu" ref={mobileMenuRef}>
             <img src={mobileMenu ? closeIcon : burgerIcon} alt="burger-icon" onClick={expandMobileMenu}/>
             <div className={`mobile-menu-container ${mobileMenu ? 'mobile-menu-container-active' : 'mobile-menu-container-inactive'}`}>
-                <div className="mobile-menu-section" onClick={() => setMobileExpandedSection('product')}> 
+                <div className="mobile-menu-section" onClick={() => ExpandMenuSection('product')}> 
                     <div className={`mobile-section-header ${mobileExpandedSection === 'product' && 'active-header'}`}>
                         <span> Product </span>
                         <img src={arrowMobile} className={mobileExpandedSection === 'product' && 'rotate-arrow'} alt="arrow"/>
@@ -53,7 +61,7 @@ function MobileNavbar(props) {
                         <a href="#">Integrations</a>
                     </div>
                 </div>
-                <div className="mobile-menu-section" onClick={() => setMobileExpandedSection('company')}>
+                <div className="mobile-menu-section" onClick={() => ExpandMenuSection('company')}>
                     <div className={`mobile-section-header ${mobileExpandedSection === 'company' && 'active-header'}`}>
                         <span> Company </span>
                         <img src={arrowMobile} className={mobileExpandedSection === 'company' && 'rotate-arrow'} alt="arrow"/>
@@ -67,7 +75,7 @@ function MobileNavbar(props) {
                         <a href="#">Careers</a>
                     </div>
                 </div>
-                <div className="mobile-menu-section" onClick={() => setMobileExpandedSection('connect')}>
+                <div className="mobile-menu-section" onClick={() => ExpandMenuSection('connect')}>
                     <div className={`mobile-section-header ${mobileExpandedSection === 'connect' && 'active-header'}`}>
                         <span>Connect</span>
                         <img src={arrowMobile} className={mobileExpandedSection === 'connect' && 'rotate-arrow'} alt="arrow"/>
